@@ -1,70 +1,324 @@
-# Getting Started with Create React App
+# Attendance Master - Quick Reference Guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Version 1.0 | Last Updated: May 2026 | © 2026 Attendance Master
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# 📱 System Requirements
 
-### `npm start`
+- Web browser:
+  - Chrome
+  - Firefox
+  - Safari
+  - Edge
+- Internet connection
+- Excel file (`.xls` or `.xlsx`)
+- Maximum file size: **10MB**
+- No installation required
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 🚀 Quick Start (3 Steps)
 
-### `npm test`
+1. Open the application
+2. Click **"Choose File"** or drag & drop your Excel file
+3. View your attendance report instantly
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**⏱️ Processing Time:** 1–2 seconds
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 📊 What You Get In Your Report
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Summary Statistics (8 Cards)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Present Days
+- Absent Days
+- Late Days Count
+- Total Working Hours
+- Weekly Off Days
+- Holiday Count
+- Early Days Count
+- Avg Daily Hours
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Detailed Table
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Date | Day | Status | InTime | OutTime | Duration |
+|------|-----|--------|--------|---------|----------|
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Additional Details:
+- Late Time & Status (`A1 / A2 / A3 / A4`)
+- Early Time & Status (`B1 / B2 / B3 / B4`)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Filters & Sort
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Filter By
+- All
+- P
+- A
+- WO
+- H
+- PL
+- HP
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Sort By
+- Date
+- Status
+- Late Time
+- Early Time
 
-### Code Splitting
+### Order
+- Ascending
+- Descending
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+# 📋 Excel File Format Checklist
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Required Elements
 
-### Making a Progressive Web App
+- [ ] Month & Year (Example: `Apr 2026`) — Must be within first 12 rows
+- [ ] Employee Name with `Employee:` label in first 20 rows
+- [ ] Shift Details (Optional) with `Shift:` label
+- [ ] Day Headers numbered `1–31`
+- [ ] Status Row labeled `Status`
+- [ ] InTime Row labeled `InTime`
+- [ ] OutTime Row labeled `OutTime`
+- [ ] Duration Row (Optional) labeled `Duration`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+# 🧾 Example Excel Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```text
+Row 1:  Monthly Status Report (Title)
+Row 3:  Apr 01 2026 To Apr 30 2026 (Date Range)
+Row 4:  Company Information
 
-### Deployment
+Row 7:
+1 W | 2 Th | 3 F | 4 Sa | ... 31 ...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Row 11:
+Employee: John Doe | Shift: General
 
-### `npm run build` fails to minify
+Row 12:
+Status | P | P | WO | P | ...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Row 13:
+InTime | 09:15 | 09:30 | - | 09:00 | ...
+
+Row 14:
+OutTime | 18:00 | 17:45 | - | 18:00 | ...
+
+Row 15:
+Duration | 08:45 | 08:15 | - | 09:00 | ...
+```
+
+---
+
+# 📌 Status Codes
+
+| Code | Meaning |
+|------|----------|
+| P | Present |
+| A | Absent |
+| WO | Weekly Off |
+| WOP | Weekly Off - Present |
+| H | Holiday |
+| HP | Holiday Present |
+| PL | Paid Leave / Personal Leave |
+| C OFF | Compensatory Off |
+
+---
+
+# ⏱️ Time Format
+
+## Use 24-Hour Format
+
+### ✅ Correct
+```text
+09:00
+09:30
+17:45
+18:00
+```
+
+### ❌ Wrong
+```text
+9:00 AM
+09:30 a.m.
+5:45 PM
+6 PM
+```
+
+---
+
+## Office Hours (Default)
+
+| Type | Time |
+|------|------|
+| In Time | 09:00 |
+| Out Time | 18:00 |
+
+---
+
+# ⚡ Late Arrival Categories
+
+| Category | Rule |
+|----------|------|
+| A1 | ≤ 10 minutes late |
+| A2 | > 10 and ≤ 30 minutes late |
+| A3 | > 30 and ≤ 45 minutes late |
+| A4 | > 45 minutes late |
+
+### Example
+Employee arrives at **09:20** → 20 minutes late → **A2**
+
+---
+
+# ⏭️ Early Departure Categories
+
+| Category | Rule |
+|----------|------|
+| B1 | ≤ 10 minutes early |
+| B2 | > 10 and ≤ 30 minutes early |
+| B3 | > 30 and ≤ 45 minutes early |
+| B4 | > 45 minutes early |
+
+### Example
+Employee leaves at **17:30** → 30 minutes early → **B2**
+
+---
+
+# 🎮 How To Use Filters & Sort
+
+## Filter By Status
+
+| Filter | Description |
+|--------|-------------|
+| All Status | Show all records |
+| P | Present days only |
+| A | Absent days only |
+| WO | Weekly Off days |
+| H | Holiday records |
+| PL | Leave records |
+| HP | Holiday Present |
+
+---
+
+## Sort Options
+
+### Sort By
+- Date
+- Status
+- Late Time
+- Early Time
+
+### Order
+- Ascending → A to Z / 1 to 9
+- Descending → Z to A / 9 to 1
+
+---
+
+# 💾 Exporting & Printing
+
+## Export Button
+- Downloads as `.xlsx`
+- Includes summary + detailed data
+- Proper Excel formatting
+- Includes filtered/sorted data
+
+## Print Button
+- Opens print dialog
+- Save as PDF supported
+- Clean professional layout
+- Only report data shown
+
+## New File Button
+- Clears current report
+- Ready for next upload
+- Resets filters and sorting
+
+---
+
+# 🛠️ Troubleshooting Quick Fixes
+
+| Issue | Solution |
+|------|----------|
+| File size exceeds 10MB | Reduce file size or split data |
+| Employee name not found | Add `Employee:` label |
+| Day headers not recognized | Format as `1 W`, `2 Th` |
+| Status row not found | Ensure row labeled `Status` exists |
+| Invalid time format | Use `HH:MM` 24-hour format |
+| Wrong totals | Check status codes |
+| Browser not working | Use latest Chrome/Firefox/Safari/Edge |
+| Slow processing | Check internet connection |
+| Can't open file | Ensure `.xls` or `.xlsx` format |
+
+---
+
+# ❓ Frequently Asked Questions
+
+## Is my data saved?
+No. Data is processed locally in your browser and is not stored on any server.
+
+---
+
+## Can I process multiple employees?
+Yes. Upload each employee file separately.
+
+---
+
+## What if I have data for only 20 days?
+The app automatically adapts to the available number of days.
+
+---
+
+## Can I change office hours?
+Yes, but it requires code modification. Default is `09:00 AM – 06:00 PM`.
+
+---
+
+## Does it work on mobile?
+Yes. The application is fully mobile-responsive.
+
+---
+
+## Can I filter by date range?
+Edit the Excel file before uploading to include only the desired dates.
+
+---
+
+## Which browsers work best?
+Latest versions of:
+- Chrome
+- Firefox
+- Safari
+- Edge
+
+---
+
+## Is internet required?
+Yes, an active internet connection is required.
+
+---
+
+# 📞 Support
+
+**Email:** gholapabhishek9@gmail.com 
+**Response Time:** 24–48 hours
+
+---
+
+## Full User Manual Includes
+
+- Detailed step-by-step guide
+- Example Excel layouts
+- Complete feature explanations
+- Extended troubleshooting
+
+---
