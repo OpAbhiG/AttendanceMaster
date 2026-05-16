@@ -321,4 +321,37 @@ Yes, an active internet connection is required.
 - Complete feature explanations
 - Extended troubleshooting
 
+
+
+---
+
+## 📸 Sabple Data
+
+### Dashboard
+![Dashboard](sampledata/img1.png)
+
+### Attendance Summary
+![Summary](sampledata/img2.png)
+
+### Filters & Table
+![Filters](sampledata/img3.png)
+
+---
+
+
+## 📂 Sample Excel File
+
+Download sample file here:
+
+[Sample Attendance Excel](sampledata/systemrepo.xls)
+
+
+
+## 🚀 Hosting
+
+[Open Attendance Master](https://attendance-master-ten.vercel.app/)
+
+
+
+
 ---
