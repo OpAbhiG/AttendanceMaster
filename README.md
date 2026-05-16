@@ -300,7 +300,8 @@ Download sample file here:
 ## 📘 Full Documentation
 
 [Read Full User Manual](sampledata/Attendance_Calculator_User_Manual)
-[Read Full User Manual](sampledata/Quick_Reference_Guide.txt)
+
+[Read Quick ref Guide](sampledata/Quick_Reference_Guide.txt)
 
 
 
