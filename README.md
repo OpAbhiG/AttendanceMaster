@@ -135,28 +135,6 @@ Duration | 08:45 | 08:15 | - | 09:00 | ...
 
 ---
 
-# ⏱️ Time Format
-
-## Use 24-Hour Format
-
-### ✅ Correct
-```text
-09:00
-09:30
-17:45
-18:00
-```
-
-### ❌ Wrong
-```text
-9:00 AM
-09:30 a.m.
-5:45 PM
-6 PM
-```
-
----
-
 ## Office Hours (Default)
 
 | Type | Time |
@@ -258,38 +236,6 @@ Employee leaves at **17:30** → 30 minutes early → **B2**
 | Browser not working | Use latest Chrome/Firefox/Safari/Edge |
 | Slow processing | Check internet connection |
 | Can't open file | Ensure `.xls` or `.xlsx` format |
-
----
-
-# ❓ Frequently Asked Questions
-
-## Is my data saved?
-No. Data is processed locally in your browser and is not stored on any server.
-
----
-
-## Can I process multiple employees?
-Yes. Upload each employee file separately.
-
----
-
-## What if I have data for only 20 days?
-The app automatically adapts to the available number of days.
-
----
-
-## Can I change office hours?
-Yes, but it requires code modification. Default is `09:00 AM – 06:00 PM`.
-
----
-
-## Does it work on mobile?
-Yes. The application is fully mobile-responsive.
-
----
-
-## Can I filter by date range?
-Edit the Excel file before uploading to include only the desired dates.
 
 ---
 
