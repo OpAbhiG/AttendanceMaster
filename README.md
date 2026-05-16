@@ -325,7 +325,7 @@ Yes, an active internet connection is required.
 
 ---
 
-## 📸 Sabple Data
+## 📸 Data
 
 ### Dashboard
 ![Dashboard](sampledata/img1.png)
