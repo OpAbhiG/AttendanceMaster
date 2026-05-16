@@ -1280,7 +1280,7 @@ const AttendanceCalculator = () => {
                   Employee: <strong>{data.employeeName || "—"}</strong>
                 </p>
                 <p style={{ marginTop: "4px", color: "#6b7280" }}>
-                  Shift: <strong>{data.shift || "—"}</strong>
+                  Summary: <strong>{data.shift || "—"}</strong>
                 </p>
               </div>
 
