@@ -333,8 +333,8 @@ Yes, an active internet connection is required.
 ### Attendance Summary
 ![Summary](sampledata/img2.png)
 
-### Filters & Table
-![Filters](sampledata/img3.png)
+### Print & Table
+![Print](sampledata/img3.png)
 
 ---
 
