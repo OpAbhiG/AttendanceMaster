@@ -1,0 +1,221 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║           ATTENDANCE CALCULATOR - QUICK REFERENCE GUIDE                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📱 SYSTEM REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Web browser (Chrome, Firefox, Safari, Edge)
+✓ Internet connection
+✓ Excel file (.xls or .xlsx)
+✓ File size: Max 10MB
+✓ No installation required
+
+🚀 QUICK START (3 STEPS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Open the application
+2. Click "Choose File" or drag-drop your Excel file
+3. View your attendance report instantly
+
+⏱️  PROCESSING TIME: 1-2 seconds
+
+📊 WHAT YOU GET IN YOUR REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SUMMARY STATISTICS (8 Cards):
+┌─────────────────────────────────────────────┐
+│ • Present Days          • Weekly Off Days   │
+│ • Absent Days           • Holiday Count     │
+│ • Late Days Count       • Early Days Count  │
+│ • Total Working Hours   • Avg Daily Hours   │
+└─────────────────────────────────────────────┘
+
+DETAILED TABLE:
+┌───────────────────────────────────────────────────────┐
+│ Date | Day | Status | InTime | OutTime | Duration    │
+│ Late Time & Status (A1/A2/A3/A4)                      │
+│ Early Time & Status (B1/B2/B3/B4)                     │
+└───────────────────────────────────────────────────────┘
+
+FILTERS & SORT:
+┌─────────────────────────────────────────────┐
+│ Filter by: All/P/A/WO/H/PL/HP               │
+│ Sort by: Date/Status/Late Time/Early Time   │
+│ Order: Ascending/Descending                 │
+└─────────────────────────────────────────────┘
+
+📋 EXCEL FILE FORMAT CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+REQUIRED ELEMENTS:
+
+☐ Month & Year (e.g., "Apr 2026") - Must be in first 12 rows
+☐ Employee Name - With "Employee:" label in first 20 rows
+☐ Shift Details (Optional) - With "Shift:" label
+☐ Day Headers - Numbered 1, 2, 3... 31 (e.g., "1 W", "2 Th", "3 F")
+☐ Status Row - Labeled "Status" with attendance codes
+☐ InTime Row - Labeled "InTime" in HH:MM format
+☐ OutTime Row - Labeled "OutTime" in HH:MM format
+☐ Duration Row (Optional) - Labeled "Duration"
+
+EXAMPLE STRUCTURE:
+─────────────────────────────────────────────────────────────
+Row 1:  Monthly Status Report (Title)
+Row 3:  Apr 01 2026 To Apr 30 2026 (Date Range)
+Row 4:  Company Information
+Row 7:  1 W | 2 Th | 3 F | 4 Sa | ... 31 ... (Day Headers)
+Row 11: Employee: John Doe | Shift: General (Info)
+Row 12: Status    | P   | P   | WO | P   | ... (Status Row)
+Row 13: InTime    | 9:15| 9:30| -  | 9:00| ... (InTime Row)
+Row 14: OutTime   | 18:00|17:45| -  |18:00| ... (OutTime Row)
+Row 15: Duration  | 8:45| 8:15| -  | 9:00| ... (Duration Row)
+─────────────────────────────────────────────────────────────
+
+📌 STATUS CODES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+P    = Present (Regular working day)
+A    = Absent (Not marked present)
+WO   = Weekly Off (Scheduled day off)
+WOP  = Weekly Off - Present (Worked on day off)
+H    = Holiday (Company/National Holiday)
+HP   = Holiday Present (Worked on holiday)
+PL   = Paid Leave / Personal Leave
+C OFF = Compensatory Off
+
+⏱️ TIME FORMAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+USE 24-HOUR FORMAT:
+
+✓ CORRECT:     ✗ WRONG:
+  09:00          9:00 AM
+  09:30          09:30 a.m.
+  17:45          5:45 PM
+  18:00          6 PM
+
+OFFICE HOURS (Default):
+  In Time:  09:00
+  Out Time: 18:00
+
+⚡ LATE ARRIVAL CATEGORIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A1  = ≤ 10 minutes late
+A2  = > 10 and ≤ 30 minutes late
+A3  = > 30 and ≤ 45 minutes late
+A4  = > 45 minutes late
+
+Example: Employee arrives at 09:20 (20 min late) = Category A2
+
+⏭️ EARLY DEPARTURE CATEGORIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+B1  = ≤ 10 minutes early
+B2  = > 10 and ≤ 30 minutes early
+B3  = > 30 and ≤ 45 minutes early
+B4  = > 45 minutes early
+
+Example: Employee leaves at 17:30 (30 min early) = Category B2
+
+🎮 HOW TO USE FILTERS & SORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILTER BY STATUS:
+┌────────────────────────────────────────┐
+│ All Status  - Show all records         │
+│ P           - Show only Present days   │
+│ A           - Show only Absent days    │
+│ WO          - Show Weekly Off days     │
+│ H           - Show Holiday records     │
+│ PL          - Show Leave records       │
+│ HP          - Show Holiday Present     │
+└────────────────────────────────────────┘
+
+SORT BY:
+  • Date       - Chronological order
+  • Status     - Group by attendance status
+  • Late Time  - Sort by arrival time
+  • Early Time - Sort by departure time
+
+ORDER:
+  ↑ Ascending  - A to Z, 1 to 9
+  ↓ Descending - Z to A, 9 to 1
+
+💾 EXPORTING & PRINTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXPORT BUTTON:
+✓ Downloads as .xlsx file
+✓ Includes summary + detailed data
+✓ Formatted for Excel
+✓ Includes all filtered/sorted data
+
+PRINT BUTTON:
+✓ Opens print dialog
+✓ Can save as PDF
+✓ Clean, professional layout
+✓ Shows only report data (no buttons)
+
+NEW FILE BUTTON:
+✓ Clears current report
+✓ Ready for next upload
+✓ Resets filters & sort
+
+🛠️ TROUBLESHOOTING QUICK FIXES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ISSUE                          → SOLUTION
+─────────────────────────────────────────────────────────────────────────
+File size exceeds 10MB         → Reduce file size / Split data
+Employee name not found        → Add "Employee:" label in first 20 rows
+Day headers not recognized     → Format: "1 W", "2 Th" (number + day)
+Status row not found           → Ensure row labeled "Status" exists
+Invalid time format            → Use HH:MM (24-hour): 09:30, not 9:30 AM
+Wrong totals                   → Check status codes (P, A, WO, etc.)
+Browser not working            → Try Chrome, Firefox, Safari, or Edge
+Slow processing                → Check internet connection
+Can't open file                → Ensure .xls or .xlsx format
+
+❓ FREQUENTLY ASKED QUESTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Q: Is my data saved?
+A: No! Data is processed in your browser and NOT saved on any server.
+
+Q: Can I process multiple employees?
+A: Yes, upload each employee's file separately.
+
+Q: What if I have data for only 20 days?
+A: That's fine! The app adapts to any number of days in your file.
+
+Q: Can I change office hours?
+A: This requires code modification. Default is 9:00 AM to 6:00 PM.
+
+Q: Does it work on mobile?
+A: Yes, the app is fully mobile-responsive!
+
+Q: Can I filter by date range?
+A: Edit your Excel file to include only desired dates before uploading.
+
+Q: What browsers work best?
+A: Chrome, Firefox, Safari, Edge (latest versions recommended).
+
+Q: Is internet required?
+A: Yes, active internet connection is needed.
+
+📞 SUPPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Email: support@attendancecalculator.com
+Response: 24-48 hours
+Document: Full User Manual included
+
+Check the User Manual for:
+✓ Detailed step-by-step guide
+✓ Example Excel layouts
+✓ Complete feature explanation
+✓ Extended troubleshooting
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ Version 1.0 | Last Updated: May 2026 | © 2026 Attendance Calculator        ║
+╚══════════════════════════════════════════════════════════════════════════════╝

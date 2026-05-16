@@ -292,10 +292,16 @@ Download sample file here:
 [Sample Attendance Excel](sampledata/systemrepo.xls)
 
 
-
 ## 🚀 Hosting
 
 [Open Attendance Master](https://attendance-master-ten.vercel.app/)
+
+
+## 📘 Full Documentation
+
+[Read Full User Manual](sampledata/Attendance_Calculator_User_Manual)
+[Read Full User Manual](sampledata/Quick_Reference_Guide.txt)
+
 
 
 
